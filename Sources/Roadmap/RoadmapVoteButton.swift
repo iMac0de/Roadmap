@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-
+@available(iOS 15, macOS 12, *)
 struct RoadmapVoteButton : View {
     @ObservedObject var viewModel : RoadmapFeatureViewModel
     @Environment(\.dynamicTypeSize) var typeSize

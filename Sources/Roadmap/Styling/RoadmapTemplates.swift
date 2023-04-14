@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+
+@available(iOS 15, macOS 12, *)
 public enum RoadmapTemplate : CaseIterable {
     case standard
     case playful

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(iOS 15.0, macOS 12.0, *)
 extension View {
     public func animateAccessible() -> some View {
         modifier(ReduceMotionnModifier())

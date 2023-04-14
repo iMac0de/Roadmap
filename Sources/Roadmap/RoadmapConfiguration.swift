@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+@available(iOS 15, macOS 12, *)
 public struct RoadmapConfiguration {
     /// The URL pointing to the JSON in the `RoadmapFeature` format.
     public let roadmapJSONURL: URL
@@ -63,6 +64,7 @@ public struct RoadmapConfiguration {
     }
 }
 
+@available(iOS 15, macOS 12, *)
 extension RoadmapConfiguration {
     static func sample() -> RoadmapConfiguration {
         .init(roadmapJSONURL: URL(string: "https://simplejsoncms.com/api/vq2juq1xhg")!, namespace: "roadmaptest")

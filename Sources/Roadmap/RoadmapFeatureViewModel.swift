@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+@available(iOS 15, macOS 12, *)
 final class RoadmapFeatureViewModel: ObservableObject {
     let feature: RoadmapFeature
     let configuration: RoadmapConfiguration

@@ -7,6 +7,7 @@
 
 import Foundation
 
+@available(iOS 15, macOS 12, *)
 final class RoadmapViewModel: ObservableObject {
     @Published private var features: [RoadmapFeature] = []
     @Published var searchText = ""

@@ -1,6 +1,7 @@
 import XCTest
 @testable import Roadmap
 
+@available(iOS 15, macOS 12, *)
 final class RoadmapTests: XCTestCase {
     func testFeatureVoter() async throws {
         let featureID = "test"

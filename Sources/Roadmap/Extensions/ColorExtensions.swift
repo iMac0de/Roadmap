@@ -7,8 +7,8 @@
 
 import SwiftUI
 
+@available(iOS 15, macOS 12, *)
 extension Color {
-    
     static public var defaultCellColor : Color {
         #if os(macOS)
             return Color.primary.opacity(0.08)

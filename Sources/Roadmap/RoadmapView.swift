@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(iOS 15, macOS 12, *)
 public struct RoadmapView<Header: View, Footer: View>: View {
     @StateObject var viewModel: RoadmapViewModel
     let header: Header
@@ -32,30 +33,35 @@ public struct RoadmapView<Header: View, Footer: View>: View {
     }
 }
 
+@available(iOS 15, macOS 12, *)
 public extension RoadmapView where Header == EmptyView, Footer == EmptyView {
     init(configuration: RoadmapConfiguration) {
         self.init(viewModel: .init(configuration: configuration), header: EmptyView(), footer: EmptyView())
     }
 }
 
+@available(iOS 15, macOS 12, *)
 public extension RoadmapView where Header: View, Footer == EmptyView {
     init(configuration: RoadmapConfiguration, @ViewBuilder header: () -> Header) {
         self.init(viewModel: .init(configuration: configuration), header: header(), footer: EmptyView())
     }
 }
 
+@available(iOS 15, macOS 12, *)
 public extension RoadmapView where Header == EmptyView, Footer: View {
     init(configuration: RoadmapConfiguration, @ViewBuilder footer: () -> Footer) {
         self.init(viewModel: .init(configuration: configuration), header: EmptyView(), footer: footer())
     }
 }
 
+@available(iOS 15, macOS 12, *)
 public extension RoadmapView where Header: View, Footer: View {
     init(configuration: RoadmapConfiguration, @ViewBuilder header: () -> Header, @ViewBuilder footer: () -> Footer) {
         self.init(viewModel: .init(configuration: configuration), header: header(), footer: footer())
     }
 }
 
+@available(iOS 15, macOS 12, *)
 struct RoadmapView_Previews: PreviewProvider {
     static var previews: some View {
         RoadmapView(configuration: .sample())

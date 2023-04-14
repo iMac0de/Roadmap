@@ -7,6 +7,7 @@
 import Foundation
 import SwiftUI
 
+@available(iOS 15, macOS 12, *)
 public struct RoadmapStyle {
     /// The image used for the upvote button
     public var upvoteIcon : Image
